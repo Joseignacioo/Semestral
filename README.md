@@ -1,2 +1,2 @@
 # Semestral
-proyecto semestral sitio web agregando calidad
+proyecto semestral sitio web django
