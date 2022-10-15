@@ -1,0 +1,238 @@
+/*========== GOOGLE FONTS ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*========== VARIABLES CSS ==========*/
+:root{
+    /*========== COLORES ==========*/
+    --first-color: #1b629575;
+    --first-color-dark: #2871a5;
+    --first-color-ligth: #ffffff;
+    --second-color: #2b8ace48;
+    --title-color: #302d2d;
+    --text-color: #58555e;
+    --box-shadow-color: 0px 5px 15px 0px #80808079;
+    --body-color: #f9f6fd;
+    
+    /*========== TAMAÑO LETRAS ==========*/
+    --xlarge-font-size: 3rem;
+    --large-font-size: 1.4rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+
+}
+/*========== BASE ==========*/
+*{
+    font-family: "Poppins";
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: var(--body-color);
+}
+/*========== NAVEGACION ==========*/
+nav{
+    background-color: var(--first-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: var(--box-shadow-color);
+    position: sticky;
+    top: 0%;
+
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.nav-logo a{
+    margin: 0.5rem;
+    color: var(--first-color-ligth);
+    text-decoration: none;
+}
+
+/* se cambia */
+.nav-logo strong{
+    font-size: 25px;
+}
+/* ---------- */
+
+.main-nav{
+    display: flex;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.main-nav .enlace{
+    margin-right: 1rem;
+}
+.main-nav .enlace a i{
+    margin-top: 10px;
+    font-size: 1.6rem;
+    color: var(--first-color-ligth);
+
+}
+.main-nav .user i{
+    margin-top: 10px;
+    font-size: 1.6rem;
+    color: var(--first-color-ligth);
+
+}
+.main-nav p{  
+    font-size: var(--small-font-size);
+    color: var(--first-color-ligth);
+    text-decoration: none;
+}
+span{
+    font-size: 2rem;
+}
+/*========== NAV CONTENIDO ==========*/
+.nav-header-main a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: var(--first-color-ligth);
+    background-color: var(--first-color);
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+.nav-header-footer a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: var(--first-color-dark);
+    text-align: center;
+    text-decoration: underline;
+    
+}
+.nav-body{
+    text-align: left;
+}
+
+.link-container{
+    margin-bottom: 1rem;
+}
+.link-container label{
+    background-color: var(--first-color);
+    width: 16rem;
+    padding: 0.5rem;
+    color: var(--first-color-ligth);
+}
+.link-body{
+    display: grid;
+}
+.link-body a{
+    color: var(--first-color-dark);
+    text-decoration: none;
+    font-size: var(--normal-font-size);
+    margin-left: 0.5rem;
+
+}
+
+.nav-footer a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: var(--first-color-ligth);
+    background-color: var(--first-color);
+}
+/*========== CONTENIDO PRINCIPAL ==========*/
+main{
+    margin-bottom: 5rem;
+}
+.main-body h1{
+    font-size: var(--xlarge-font-size);
+    text-align: center;
+    color: var(--first-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-weight: bold;
+}
+main .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+}
+.caja img{
+    width: 220px;
+    height: 230px;
+    border-radius: 30px;
+}
+.caja img:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+}
+.caja{
+
+    margin: 30px;
+    background-color: var(--box-shadow-color);
+}
+.card{
+    position: static;
+    height: 500px;
+    width: 255px;
+}
+.card:hover{
+    box-shadow: var(--box-shadow-color);
+}
+.precio{
+    display: grid;
+}
+.descripcion p{
+    color: var(--title-color) ;
+    font-size: var(--small-font-size);
+    max-width: 221px;
+}
+.descripcion span{
+    color: var(--title-color) ;
+    font-size: var(--large-font-size);
+    top: 0%;
+
+}
+.descripcion h5{
+    font-size: small;
+    margin-top: 0.5rem;
+}
+.card-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-footer i{
+    font-size: 1.5rem;
+    color: var(--first-color);
+
+}
+.card-footer .btn{
+    
+    color: var(--first-color-ligth);
+    background-color: var(--first-color);
+}
+
+
+
+/*========== FOOTER ==========*/
+footer{
+    padding: 1%;
+    width: 100%;
+    background-color: var(--first-color)
+}
+footer .container{
+    justify-content: space-evenly;
+    display: flex;
+}
+footer .container p{
+    font-weight: bold;
+    color: var(--first-color-ligth);
+}
+.footer-body{
+    text-align: left;
+    display: grid;
+}
+footer .container a{
+    color: var(--first-color-ligth);
+    text-decoration: none;
+
+}
