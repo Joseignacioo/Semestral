@@ -1,0 +1,169 @@
+
+/*========== GOOGLE FONTS ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*========== VARIABLES CSS ==========*/
+:root{
+    /*========== COLORES ==========*/
+    --first-color: #1b629575;
+    --first-color-dark: #2871a5;
+    --first-color-ligth: #ffffff;
+    --title-color: #302d2d;
+    --text-color: #58555e;
+    --box-shadow-color: 0px 5px 15px 0px #80808079;
+    --body-color: #f9f6fd;
+    
+    /*========== TAMAÑO LETRAS ==========*/
+    --large-font-size: 1.4rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+
+}
+/*========== BASE ==========*/
+*{
+    font-family: "Poppins";
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: var(--body-color);
+}
+/*========== NAVEGACION ==========*/
+nav{
+    background-color: var(--first-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: var(--box-shadow-color);
+
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.nav-logo a{
+    margin: 0.5rem;
+    color: var(--first-color-ligth);
+    text-decoration: none;
+}
+
+/* se cambia */
+.nav-logo strong{
+    font-size: 25px;
+}
+/* ---------- */
+
+.main-nav{
+    display: flex;
+}
+.main-nav p{
+    margin: 0.5rem;
+    font-size: var(--small-font-size);
+    color: var(--first-color-ligth);
+    text-decoration: none;
+}
+.main-nav img{
+    border-radius: 100%;
+    width: 3rem;
+}
+span{
+    font-size: 2rem;
+}
+/*========== NAV ADMINISTRACION ==========*/
+.nav-header-main a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: var(--first-color-ligth);
+    background-color: var(--first-color);
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+.nav-header-footer a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: var(--first-color-dark);
+    text-align: center;
+    text-decoration: underline;
+    
+}
+.nav-body{
+    text-align: left;
+}
+
+.link-container label{
+    font-size: var(--large-font-size);
+    font-weight: bold;
+    padding: 0.5rem;
+    color: var(--title-color);
+}
+.link-body{
+    display: grid;
+}
+.link-body a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+
+}
+.link-body a:hover{
+    color: var(--first-color-ligth);
+    text-decoration: none;
+    font-size: 1.1rem;
+    background-color: var(--first-color);
+    padding: 0.5rem;
+    box-shadow: var(--box-shadow-color);
+    margin-left: 5rem;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+.nav-footer a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+    color: var(--first-color-ligth);
+    background-color: var(--first-color);
+}
+
+/*========== CONTENIDO PRINCIPAL ==========*/
+main{
+    margin: 1rem;
+}
+.card{
+    margin: 2%;
+    box-shadow: var(--box-shadow-color);
+}
+.card-body{
+    margin: 2%;
+}
+.card-perfil{
+    display: flex;
+    justify-content: space-between;
+
+}
+.card-perfil p{
+    font-size: var(--large-font-size);
+    text-decoration: overline;
+}
+.modificar-body{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10%;
+}
+th{
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+}
+td{
+    font-size: var(--small-font-size);
+}
+tbody tr:hover{
+    box-shadow: var(--box-shadow-color);
+    transition: all 0.3s;
+}
+
+

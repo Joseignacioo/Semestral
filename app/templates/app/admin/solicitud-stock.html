@@ -1,0 +1,42 @@
+{% extends 'app/admin/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-perfil">
+                    <div class="titulo">
+                        <p>Solicitud de Stock</p>
+                    </div>
+                    &nbsp;
+                </div>
+                <div class="formulario">
+                    <form>
+                        <div class="">
+                          <label class="form-label">Nombre</label>
+                          <input class="form-control" type="text">
+                          <label class="form-label">Cantidad</label>
+                          <input class="form-control" type="text">
+                          <label class="form-label">Sucursal</label>
+                          <input class="form-control" type="text">
+                          <label class="form-label">Fecha</label>
+                          <input class="form-control" type="date">
+                        </div>
+                        <hr>
+                        <a href="" class="btn btn-primary">Enviar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+
+
+

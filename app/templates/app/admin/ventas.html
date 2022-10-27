@@ -1,0 +1,75 @@
+{% extends 'app/admin/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-perfil">
+                    <div class="titulo">
+                        <p>Informe De Ventas</p>
+                    </div>   
+                </div>
+                <hr>
+                <br>
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Rut</th>
+                                <th>Comuna</th>
+                                <th>Cantidades</th>
+                                <th>Estado</th>
+                                <th>modificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Juan Cartier</td>
+                                <td>20.123.432-3</td>
+                                <td>Providencia</td>
+                                <td>2 unidades</td>
+                                <td>Pagado</td>
+                                <td>
+                                    <a href="" class="btn bg-warning"><i class='bx bx-cog' ></i></a>
+                                    <a href="" class="btn bg-danger "><i class='bx bx-message-square-x'></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Juan Cartier</td>
+                                <td>20.123.432-3</td>
+                                <td>Providencia</td>
+                                <td>2 unidades</td>
+                                <td>Pagado</td>
+                                <td>
+                                    <a href="" class="btn bg-warning"><i class='bx bx-cog' ></i></a>
+                                    <a href="" class="btn bg-danger"><i class='bx bx-message-square-x'></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Juan Cartier</td>
+                                <td>20.123.432-3</td>
+                                <td>Providencia</td>
+                                <td>2 unidades</td>
+                                <td>Pagado</td>
+                                <td>
+                                    <a href="" class="btn bg-warning"><i class='bx bx-cog' ></i></a>
+                                    <a href="" class="btn bg-danger"><i class='bx bx-message-square-x'></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

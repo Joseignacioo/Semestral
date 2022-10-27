@@ -1,0 +1,72 @@
+{% extends 'app/admin/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-perfil">
+                    <div class="titulo">
+                        <p>Estado de Stock</p>
+                    </div>      
+                </div>
+                <hr>
+                <br>
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead class="">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>stock</th>
+                                <th>Sucursal</th>
+                                <th>fecha</th>
+                                <th>Estado</th>
+                                <th>modificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ibuprofeno</td>
+                                <td>50</td>
+                                <td>Providencia</td>
+                                <td>30/07/2022</td>
+                                <td>Espera</td>
+                                <td>
+                                    <a href="" class="btn bg-warning"><i class='bx bx-cog' ></i></a>
+                                    <a href="" class="btn bg-danger "><i class='bx bx-message-square-x'></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ibuprofeno</td>
+                                <td>50</td>
+                                <td>Providencia</td>
+                                <td>30/07/2022</td>
+                                <td>Enviado</td>
+                                <td>
+                                    <a href="" class="btn bg-warning"><i class='bx bx-cog' ></i></a>
+                                    <a href="" class="btn bg-danger "><i class='bx bx-message-square-x'></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ibuprofeno</td>
+                                <td>50</td>
+                                <td>Providencia</td>
+                                <td>30/07/2022</td>
+                                <td>Espera</td>
+                                <td>
+                                    <a href="" class="btn bg-warning"><i class='bx bx-cog' ></i></a>
+                                    <a href="" class="btn bg-danger "><i class='bx bx-message-square-x'></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>           
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

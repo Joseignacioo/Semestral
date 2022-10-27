@@ -1,0 +1,83 @@
+{% extends 'app/admin/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+
+{% load humanize %}
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-perfil">
+                    <div class="titulo">
+                        <p>Stock de Productos</p>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Sucursal</th>
+                                <th>($)</th>
+                                <th>Stock</th>
+                                <th>modificacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for p in productos %}
+                            <tr>
+                                <td><img src="{{ p.imagen.url }}" alt="" width="50px"></td>
+                                <td>{{ p.nombre }}</td>
+                                <td></td>
+                                <td>${{ p.precio | intcomma }}</td>
+                                <td>{{ p.stock }}</td>
+                                <td>
+                                    <a href="{% url 'adminModificarProducto' p.id %}" class="btn bg-warning"><i class='bx bx-message-square-x'></i></a>
+                                    <a href="{% url 'adminEliminarProductos' p.id %}" class="btn bg-danger"><i class='bx bx-cog'></i></a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    AGREGAR
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy}}
+                    <div class="modal-footer">
+                        <input type="reset" value="Cancelar" class="btn btn-secondary">
+                        &nbsp;
+                        <input type="submit" value="Guardar" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/Productos.css' %}">
+{% endblock %}
+
+
+{% load humanize %}
+<main>
+    <div class="main-body">
+        <h1>Productos</h1>
+    </div>
+    <div class="container">
+        {% for p in productos %}
+        <div class="caja">
+            <div class="card">
+                <div class="card-body">
+                    <div class="descripcion">
+                        {% if p.imagen %}
+                        <img src="{{ p.imagen.url }}" width="100px" alt="">
+                        {% endif %}
+                        <div class="precio">
+                            <h5>{{ p.marca | capfirst }}</h5>
+                            <p>{{ p.descripcion }}</p>
+                            <span>${{ p.precio | intcomma }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a class="btn" href="">Agregar</a>
+                    <a type="button" href=""><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+{% endblock %}
