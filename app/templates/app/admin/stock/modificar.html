@@ -1,0 +1,33 @@
+{% extends 'app/admin/base.html' %}
+
+{% load static %}
+
+
+{% block contenido %}
+{% load crispy_forms_tags %}
+<main>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-perfil">
+                    <div class="titulo">
+                        <p>modificacion</p>
+                    </div>
+                    &nbsp;
+                </div>
+                <div class="formulario">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form | crispy}}
+                        <div class="modal-footer">
+                            <input type="reset" value="Cancelar" class="btn btn-secondary">
+                            &nbsp;
+                            <input type="submit" value="Guardar" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

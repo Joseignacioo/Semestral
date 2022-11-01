@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+
+
+{% load static %}
+{% block contenido %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/login.css' %}">
+{% endblock %}
+
+
+{% load crispy_forms_tags %}
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Registro de Usuario</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{ form | crispy }}
+                            <div class="mt-4">
+                                <a href="{% url 'home' %}">Ir al home</a> |
+                                <a href="{% url 'login' %}"> Iniciar Sesion</a>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="reset" value="Cancelar" class="btn btn-secondary mt-2">
+                                &nbsp;
+                                <input type="submit" value="Guardar" class="btn btn-primary mt-2">
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
